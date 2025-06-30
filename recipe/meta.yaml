@@ -1,5 +1,5 @@
 {% set name = "mwparserfromhell" %}
-{% set version = "0.6.6" %}
+{% set version = "0.7.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 71afec1e9784ba576e95d6f34845582d3c733a3a52ba770dd8a9c3a40e5b649f
+  sha256: c9e413e80eaa88b75fd5be4d9f9d32be936e69b9596a0f99d1c24bca17156e44
 
 build:
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
