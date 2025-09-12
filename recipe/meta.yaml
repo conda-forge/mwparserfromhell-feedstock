@@ -16,12 +16,12 @@ build:
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
-    - pip
-    - setuptools
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
     - python
+    - pip
+    - setuptools
   run:
     - python
 
