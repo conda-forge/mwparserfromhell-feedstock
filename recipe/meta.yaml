@@ -18,6 +18,8 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
+    - pip
+    - setuptools
   host:
     - python
     - pip
