@@ -10,16 +10,18 @@ source:
   sha256: f4193072e9ea93b9e88f772f60a02125c0602d32890d0bbdcb275ed58c8b3763
 
 build:
-  number: 2
+  number: 3
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   build:
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
   host:
-    - pip
     - python
+    - pip
     - setuptools
   run:
     - python
